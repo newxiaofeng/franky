@@ -1,0 +1,19 @@
+@import "./animate/animationclasses.less";
+@import "./animate/bounceInLeft.less";
+@import "./animate/bounceOutRight.less";
+.bounce-enter {
+  .animated();
+  .animation-name(bounceInLeft);
+}
+
+.bounce-leave {
+  .animated();
+  .animation-name(bounceOutRight);
+}
+
+
+.Image {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+}

@@ -1,0 +1,43 @@
+{
+  "name": "franky",
+  "version": "1.0.0",
+  "description": "franky cms test",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "albert",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "classnames": "^1.2.1",
+    "grunt-autoprefixer": "~3.0.0",
+    "grunt-browser-sync": "^2.1.1",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-cssmin": "~0.12.2",
+    "grunt-contrib-htmlmin": "~0.4.0",
+    "grunt-contrib-imagemin": "~0.9.4",
+    "grunt-contrib-jshint": "^0.11.1",
+    "grunt-contrib-less": "~1.0.1",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-react": "0.12.1",
+    "grunt-rev": "~0.1.0",
+    "grunt-usemin": "~3.0.0",
+    "grunt-webpack": "~1.0.8",
+    "grunt-wiredep": "~2.0.0",
+    "load-grunt-config": "~0.17.0",
+    "webpack": "~1.8.4",
+    "react": "^0.13.1",
+    "react-router": "~0.13.2",
+    "less": "^2.4.0",
+    "less-loader": "^2.1.0",
+    "jsx-loader": "^0.12.2",
+    "style-loader": "^0.8.3",
+    "url-loader": "^0.5.5",
+    "css-loader": "^0.9.1",
+    "file-loader": "^0.8.1",
+    "connect-modrewrite": "^0.7.11"
+  },
+  "dependencies": {}
+}
