@@ -3,7 +3,7 @@
  */
 module.exports = function(grunt, options) {
     return {
-        files: ['app/**/*', '!app/**/*.html'],
-        tasks: ['webpack']
+        files: ['tmp/**/*'],
+        tasks: []
     }
 }

@@ -5,7 +5,6 @@ var TransitionGroup = require('react/lib/ReactCSSTransitionGroup');
 require('./css/app.less');
 var Button = require('./components/common/button/Button');
 React.initializeTouchEvents(true);
-
 var App = React.createClass({
     contextTypes: {
         router: React.PropTypes.func
@@ -16,10 +15,6 @@ var App = React.createClass({
         return (
             <div className={"layout-page"}>
                 <main className={"layout-main"}>
-                    {/*<ul>
-                        <li><Link to="page1">Page 1</Link></li>
-                        <li><Link to="page2">Page 2</Link></li>
-                    </ul>*/}
                     <TransitionGroup component="div" transitionName="bounce">
                         <RouteHandler key={name}/>
                     </TransitionGroup>
@@ -47,18 +42,16 @@ var Page2 = React.createClass({
             </div>
         );
     }
-})
+});
+
 var routes = (
     <Route name="app" path="/" handler={App}>
         <DefaultRoute handler={require('./components/pages/homePage/HomePage')}></DefaultRoute>
-        <Route name="page1" handler={Page1} />
+        <Route name="publish" handler={Page1} />
         <Route name="page2" handler={Page2} />
     </Route>
 );
 
 Router.run(routes, Router.HistoryLocation, function (Handler, state) {
-    React.render(<Handler/>, document.getElementById('app'));
-    var scene = document.getElementById('scene');
-    console.log(scene);
-    var parallax = new Parallax(scene);
+    React.render(<Handler {...state}/>, document.getElementById('app'));
 });

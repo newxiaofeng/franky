@@ -14,6 +14,7 @@ module.exports = function(grunt, options) {
                 chunkFilename: '[name].chunk.js',
                 publicPath: '/'
             },
+            watch: true,
             module: {
                 loaders: [
                     {
@@ -26,19 +27,17 @@ module.exports = function(grunt, options) {
                     },
                     {
                         test: /\.less$/,
-                        loader: "style!css!less"
+                        loader: "style!css!autoprefixer!less"
                     },
                     {
                         test: /\.(png|jpg|gif)$/,
                         loader: 'url-loader?limit=8192&name=[name].[ext]'
-                    },
+                    }
                 ]
             },
             plugins: [
                 new webpack.ProvidePlugin({
-                    "$": "jquery",
-                    "jQuery": "jquery",
-                    "windows.jQuery": "jquery"
+                    "Parallax": "exports?window.Parallax!"+ process.cwd() + "/app/lib/Parallax.js"
                 })
             ]
         }
