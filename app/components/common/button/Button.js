@@ -1,7 +1,11 @@
 var React = require('react/addons');
 var PropTypes = React.PropTypes;
+var classable = require('../mixins/classable');
 module.exports = React.createClass({
     displayName: "Button",
+
+    mixins: [classable],
+
     propTypes: {
         onClick: PropTypes.func,
         disabled: PropTypes.bool,
@@ -11,17 +15,12 @@ module.exports = React.createClass({
     },
 
     getDefaultProps: function() {
-        var self = this;
         return {
-            onClick: function() {
-                console.log('click');
-            },
             disabled: false,
             className:"button-primary"
         }
     },
     render: function() {
-        console.log(this.props);
         return (<button {...this.props} >{this.props.children}</button>);
     }
 });
